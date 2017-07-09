@@ -1,0 +1,30 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+    background: #333;
+    color: #fff
+}
+
+#wrapper {
+    padding: 100px;
+    text-align: center;
+}
+
+a {
+    color: #bcbcbc;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+#wikiSearch {
+    margin-bottom: 50px;
+}
