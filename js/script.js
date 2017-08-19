@@ -2,8 +2,8 @@ $(document).ready(function(){
     var searchForm = $('#wikiSearch'),
         searchValue = $('#wikiSearch :input')[0];
     
-    searchForm.submit(function(){
-        event.preventDefault()
+    searchForm.submit(function(event){
+        event.preventDefault();
         callWikiApi(searchValue.value);
     });
 });
