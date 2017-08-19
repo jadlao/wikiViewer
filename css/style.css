@@ -4,11 +4,11 @@ html, body {
     font-family: sans-serif;
     font-size: 1em;
     background: #8b8b8b;
-    color: #fff
+    color: #fff;
 }
 
 #wrapper {
-    padding: 100px;
+    padding: 50px;
     text-align: center;
 }
 
