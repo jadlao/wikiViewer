@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     font-family: sans-serif;
     font-size: 1em;
-    background: #333;
+    background: #8b8b8b;
     color: #fff
 }
 
@@ -19,6 +19,7 @@ a {
 a:hover {
     text-decoration: none;
     color: #fff;
+    transition: 0.5s ease;
 }
 
 h1 {
@@ -27,4 +28,28 @@ h1 {
 
 #wikiSearch {
     margin-bottom: 50px;
+}
+
+.articleContainer {
+    margin-top: 50px;
+}
+
+.media {
+    border: 1px solid #fff;
+    padding: 10px;
+    background: #3d9569;
+}
+
+.media-title {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+.media-text a {
+    color: #bcbcbc;
+}
+
+.media-text a:hover {
+    color: #fff;
+    transition: 0.5s ease;
 }

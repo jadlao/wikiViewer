@@ -16,15 +16,16 @@ function callWikiApi(searchTerm){
     // AJAX call if searchTerm is present
     if(searchTerm){
         $.ajax({
-            url: ('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&origin=*&titles=' + searchTerm)
+            url: ('https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&list=search&pageids=10&srsearch='+searchTerm+'&srprop=snippet'),
+            dataType: 'jsonp'
         })
         .done(function(data){
             // test if data is grabbed successfully
-            console.log(data);
+            //console.log(data);
             var articleListContainer = $('.articleContainer');
             // empty array each time search is submitted
             articleListContainer.empty();
-            prepareArticleList(data.query.pages);
+            displayArticleList(data.query.search);
         })
         .fail(function(err){
             console.log(err);
@@ -36,29 +37,38 @@ function callWikiApi(searchTerm){
 };
 
 // Prepare articles and print on screen
-function prepareArticleList(articleList){
+function displayArticleList(articleList){
     var articleListContainer = $('.articleContainer');
-    //console.log(articleList);
-    
+        
     articleList.forEach(function(article){
-        console.log(article);
         articleListContainer.append(articleElement(article));
-    })
+    });
 };
 
 // Pull articles from list
 function articleElement(article){
-    //console.log(article);
+    console.log(article);
     
-    var articleElement = $('<div class="media"></div>');
+    var articleElement = $('<div class="media"><div class="media-title"></div><div class="media-text"></div></div>')
     
-    var title = $('<h2></h2>');
+    var title = $('<h2></h2>')
+    var snippet = $('<p></p>')
+    var pagelink = $('<br><a href=""><h4>Read more here</h4></a>')
     
-    title.text(article.title);
+    title.text(article.title)
+    snippet.html(article.snippet)
+    pagelink.attr('href', 'https://en.wikipedia.org/?curid=' + article.pageid)
+    //console.log(article.title, article.snippet, article.pagelink);
     
     articleElement
-        .find('.media')
+        .find('.media-title')
             .append(title)
+    articleElement
+        .find('.media-text')
+            .append(snippet)
+            .append(pagelink)
     
+    //console.log(articleElement);
+        
     return articleElement
 };
