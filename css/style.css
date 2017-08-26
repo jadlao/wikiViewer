@@ -1,25 +1,40 @@
 html, body {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 1em;
-    background: #8b8b8b;
-    color: #fff;
+    font-weight: 300;
+    line-height: 1.7;
+    background: #f9f0d6;
+    color: #424b43;
 }
 
 #wrapper {
     padding: 50px;
-    text-align: center;
 }
 
-a {
-    color: #bcbcbc;
+.lead {
+    font-size: 2em;
+}
+
+a, a:focus {
+    color: #b65e38;
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #914b2c;
     transition: 0.5s ease;
+}
+
+h1, h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    color: #386373;
 }
 
 h1 {
@@ -30,26 +45,56 @@ h1 {
     margin-bottom: 50px;
 }
 
+#wikiSearch input {
+    border-radius: 0;
+}
+
+.search {
+    padding: 25px;
+}
+
+.search-btn {
+    padding: 16px;
+    background: #b65e38;
+    color: #f9f0d6;
+    border: 0;
+}
+
+.search-btn:hover {
+    background: #914b2c;
+    color: #f9f0d6;
+    transition: 0.5s ease;
+}
+
+.search-btn:focus {
+    background: #914b2c;
+    color: #f9f0d6;
+}
+
 .articleContainer {
     margin-top: 50px;
 }
 
+.random {
+    padding: 15px;
+    background: #b65e38;
+    color: #f9f0d6;
+    border: 0;
+    text-decoration: none;
+}
+
+.random:hover {
+    background: #914b2c;
+    transition: 0.5s ease;
+}
+
 .media {
-    border: 1px solid #fff;
-    padding: 10px;
-    background: #3d9569;
+    padding: 40px;
+    background: #f3e2ae;
+    margin-bottom: 40px;
 }
 
 .media-title {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #386373;
     margin-bottom: 30px;
-}
-
-.media-text a {
-    color: #bcbcbc;
-}
-
-.media-text a:hover {
-    color: #fff;
-    transition: 0.5s ease;
 }

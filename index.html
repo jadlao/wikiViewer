@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wikipedia Viewer</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,17 +14,19 @@
     <div class="container-fluid" id="wrapper">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Wikipedia Article Viewer</h1>
+                <h1 class="lead text-center">Wikipedia Article Viewer</h1>
                
                 <form action="#" id="wikiSearch" class="input-group">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control search">
                     
                     <div class="input-group-btn">
-                        <input type="submit" class="btn btn-success" value="Search">
+                        <input type="submit" class="btn search-btn" value="Search">
                     </div>
                 </form>
                 
-                <a class="random" href="https://en.wikipedia.org/wiki/Special:Random"><h4>Click here for a random article</h4></a>
+                <div class="text-center">
+                    <a class="random" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a>
+                </div>
                 
                 <div class="articleContainer">
                     <!-- articles get appended here -->

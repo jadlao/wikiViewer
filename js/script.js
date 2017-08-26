@@ -51,9 +51,9 @@ function articleElement(article){
     
     var articleElement = $('<div class="media"><div class="media-title"></div><div class="media-text"></div></div>')
     
-    var title = $('<h2></h2>')
+    var title = $('<h2 class="text-center"></h2>')
     var snippet = $('<p></p>')
-    var pagelink = $('<br><a href=""><h4>Read more here</h4></a>')
+    var pagelink = $('<br><a class="text-center" target="_blank" href=""><h4>Read more here</h4></a>')
     
     title.text(article.title)
     snippet.html(article.snippet)
