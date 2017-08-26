@@ -9,3 +9,5 @@ Demo: https://jadlao.github.io/wikiViewer/
 * I can click a button to see a random Wikipedia entry.
 
 # Video Walkthrough
+
+![Alt Text](https://image.ibb.co/j5Qgbk/wikiviewer.gif)
