@@ -50,7 +50,8 @@ h1 {
 }
 
 .search {
-    padding: 25px;
+    padding: 15.5px;
+    height: 100%;
 }
 
 .search-btn {
