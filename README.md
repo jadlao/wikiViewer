@@ -4,6 +4,8 @@ the first 10 results with a snippet of the article and a link to the page itself
 
 Stack: Bootstrap, jQuery, Wikipedia API
 
+Blog post: https://josefadlao.com/blog/posts/2017-08/wikitunes
+
 Demo: https://jadlao.github.io/wikiViewer/
 
 # User Stories
